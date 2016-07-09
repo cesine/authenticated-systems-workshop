@@ -3,6 +3,8 @@
 
 # Workshop for Authenticated Systems
 
+http://www.meetup.com/NY-JavaScript/events/230489581/
+
 In this hands-on workshop we will go over a few ways you can implement authentication (including offline authentication strategies) and then dive into some code for both a server and a client which you can adapt to suit your own app.
 
 Come with your laptop, and an idea of an app you want to make, or join forces with others to experiment together!
