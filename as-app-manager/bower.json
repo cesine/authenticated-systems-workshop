@@ -1,0 +1,13 @@
+{
+  "name": "as-app-manager",
+  "description": "Example Node.js app for a manager perspective of the data for authenticated systems workshop",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "as-ui-manager": "https://github.com/cesine/as-ui-manager.git"
+  }
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+var url = require('url');
+
+var app = require('../app');
+var config = require('../config');
+
+var url = url.parse(config.url);
+
+app.set('port', url.port);
+
+var server = app.listen(app.get('port'), function() {
+  console.log('Express server listening on port ' + server.address().port);
+});
