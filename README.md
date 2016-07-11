@@ -336,9 +336,11 @@ Here is an example system (the "as" system) and various apps and services which 
 * https://tools.ietf.org/html/rfc6749
 * https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
 * https://stormpath.com/blog/build-api-restify-stormpath
+* https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
 * https://github.com/oauthjs
 * http://passportjs.org
 * http://nginx.org/en/docs/http/load_balancing.html
+* https://github.com/auth0/node-jsonwebtoken
 * https://jwt.io
 
 [travis-image]: https://travis-ci.org/cesine/authenticated-systems-workshop.svg?branch=master
