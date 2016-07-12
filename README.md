@@ -9,6 +9,23 @@ In this hands-on workshop we will go over a few ways you can implement authentic
 
 Come with your laptop, and an idea of an app you want to make, or join forces with others to experiment together!
 
+## Set up
+
+Here is a script which will download, build and link the sample system for you.
+
+* [Mac developer script](https://raw.githubusercontent.com/cesine/authenticated-systems-workshop.sh)
+<pre>
+$ cd $HOME/Downloads && curl -O --retry 999 --retry-max-time 0 -C - https://raw.githubusercontent.com/cesine/authenticated-systems-workshop/master/build.sh && bash build.sh
+</pre>
+
+Here is a script which will run all the tests for you
+
+* [Mac developer script](https://raw.githubusercontent.com/cesine/authenticated-systems-workshop.sh)
+<pre>
+$ cd $HOME/Downloads && curl -O --retry 999 --retry-max-time 0 -C - https://raw.githubusercontent.com/cesine/authenticated-systems-workshop/master/test.sh && bash test.sh
+</pre>
+
+
 ## Topics discussed
 
 * Using External Oauth2 Providers
