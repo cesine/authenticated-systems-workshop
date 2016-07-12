@@ -9,7 +9,7 @@
     "start": "node ./bin/www",
     "test": "mocha --recursive test",
     "test:debug": "node-debug _mocha test/integration/oauth.js",
-    "prepublish": "bower install"
+    "postinstall": "bower install"
   },
   "repository": "https://github.com/cesine/authenticated-systems-workshop.git",
   "main": "app",
