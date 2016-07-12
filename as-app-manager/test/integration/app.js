@@ -38,7 +38,7 @@ describe('/v1', function() {
           if (err) throw err;
 
           // If this fails, run 'bower install' on the project
-          expect(res.text).to.contain('TODO: include the ui');
+          expect(res.text).to.contain('Anything App');
 
           done();
         });
