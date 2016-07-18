@@ -248,7 +248,7 @@ bower link as-ui-manager
 npm start &
 echo "Opening you to the manager app"
 sleep 5
-open http://localhost:8011
+open https://localhost:8011
 
 
 echo "You can kill the services using (where xxx is the process id) $ kill xxxx "

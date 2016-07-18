@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var url = require('url');
+var https = require('https');
 
 var app = require('../app');
 var config = require('../config');
@@ -8,6 +9,6 @@ var url = url.parse(config.url);
 
 app.set('port', url.port);
 
-var server = app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + server.address().port);
+var server = https.createServer(config.ssl, app).listen(app.get('port'), function() {
+  console.log('HTTPS Express server listening on https://localhost:' + server.address().port);
 });
