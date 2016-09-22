@@ -5,7 +5,7 @@ var debug = require('debug')('app');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
+var morgan = require('morgan');
 
 var errorsMiddleware = require('./middleware/error');
 
@@ -17,7 +17,7 @@ app.locals.ENV_DEVELOPMENT = env === 'development';
 /**
  * Config
  */
-app.use(logger(env));
+app.use(morgan('combined'));
 
 /**
  * Body parsers
@@ -36,7 +36,6 @@ app.use(bodyParser.urlencoded({
  */
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger(env));
 
 app.use(express.static(path.join(__dirname, 'public/components/as-ui-manager')));
 
