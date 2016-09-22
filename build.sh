@@ -130,27 +130,6 @@ open SpecRunner.html
 
 
 echo ''
-echo "Downloading the sample authentication service from Github."
-cd $AUTH_WORKSHOP_HOME
-git clone https://github.com/cesine/as-auth-provider.git
-cd as-auth-provider
-echo "Setting the upstream of the repository so that updates are easy to do"
-git remote rm upstream
-git remote add upstream https://github.com/cesine/as-auth-provider.git
-git remote rm origin
-git remote add origin git@github.com:"$github_username"/as-auth-provider.git;
-git stash
-git pull upstream master
-git stash pop
-echo " Installing build dependancies "
-npm install
-bower install
-echo " Running jshint, tests"
-# npm run lint
-npm test
-
-
-echo ''
 echo "Downloading the sample token repo from Github."
 cd $AUTH_WORKSHOP_HOME
 git clone https://github.com/cesine/as-token-javascript.git
@@ -172,6 +151,29 @@ echo " Running jshint, tests"
 # npm run lint
 npm test
 open SpecRunner.html
+
+
+echo ''
+echo "Downloading the sample authentication service from Github."
+cd $AUTH_WORKSHOP_HOME
+git clone https://github.com/cesine/as-auth-provider.git
+cd as-auth-provider
+echo "Setting the upstream of the repository so that updates are easy to do"
+git remote rm upstream
+git remote add upstream https://github.com/cesine/as-auth-provider.git
+git remote rm origin
+git remote add origin git@github.com:"$github_username"/as-auth-provider.git;
+git stash
+git pull upstream master
+git stash pop
+echo " Installing build dependancies "
+npm install
+npm link as-token
+bower install
+echo " Running jshint, tests"
+# npm run lint
+npm test
+
 
 
 echo ''
