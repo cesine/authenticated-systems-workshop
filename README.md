@@ -1,5 +1,4 @@
 [![Build Status][travis-image]][travis-url]
-[![Coverage Status][coverage-image]][coverage-url]
 
 # Workshop for Authenticated Systems
 
@@ -364,5 +363,3 @@ Here is an example system (the "as" system) and various apps and services which 
 
 [travis-image]: https://travis-ci.org/cesine/authenticated-systems-workshop.svg?branch=master
 [travis-url]: https://travis-ci.org/cesine/authenticated-systems-workshop
-[coverage-image]: https://coveralls.io/repos/github/cesine/authenticated-systems-workshop/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/github/cesine/authenticated-systems-workshop?branch=master
