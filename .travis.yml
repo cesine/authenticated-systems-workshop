@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-  - "4"
+  - "8"
 
 before_install:
-- bash build.sh
+- bash build.sh cesine
 
 script:
   - bash test.sh

@@ -21,6 +21,7 @@ if [ "$(whoami)" == "root" ]
   }
 fi
 
+github_username=$1
 
 #IF you want to customize the home's location, change this variable
 AUTH_WORKSHOP_HOME=$HOME/auth_workshop
@@ -88,9 +89,13 @@ echo "export DEBUG=*" >> $HOME/.bash_profile
 mkdir $AUTH_WORKSHOP_HOME
 cd $AUTH_WORKSHOP_HOME
 
-echo "What is your GitHub username (so we can set that to the origin of the repos instead of the main project)"
-echo -n "(e.g. myusernameontgithub) and press [ENTER]: "
-read github_username;
+if [ -z "$github_username" ]
+  then {
+  echo "What is your GitHub username (so we can set that to the origin of the repos instead of the main project)"
+  echo -n "(e.g. myusernameontgithub) and press [ENTER]: "
+  read github_username;
+}
+fi
 
 echo ''
 echo "Downloading the sample authentication architecture from Github."
@@ -121,7 +126,7 @@ git stash
 git pull upstream master
 git stash pop
 echo " Installing build dependancies "
-npm install
+rm -rf node_modules && npm install
 bower install
 bower link
 echo " Running jshint, tests"
@@ -143,7 +148,7 @@ git stash
 git pull upstream master
 git stash pop
 echo " Installing build dependancies "
-npm install
+rm -rf node_modules && npm install
 npm link
 bower link
 echo " Running jshint, tests"
@@ -167,7 +172,7 @@ git stash
 git pull upstream master
 git stash pop
 echo " Installing build dependancies "
-npm install
+rm -rf node_modules && npm install
 npm link as-token
 bower install
 echo " Running jshint, tests"
@@ -190,7 +195,7 @@ git stash
 git pull upstream master
 git stash pop
 echo " Installing build dependancies "
-npm install
+rm -rf node_modules && npm install
 npm link
 bower link
 echo " Running jshint, tests"
@@ -208,12 +213,12 @@ echo "Setting the upstream of the repository so that updates are easy to do"
 git remote rm upstream
 git remote add upstream https://github.com/cesine/as-ui-manager.git
 git remote rm origin
-git remote add origin git@github.com:"$github_username"/PraatTextGridJS.git;
+git remote add origin git@github.com:"$github_username"/as-ui-manager.git;
 git stash
 git pull upstream master
 git stash pop
 echo " Installing build dependancies "
-npm install
+rm -rf node_modules && npm install
 bower link
 bower link as-sdk-javascript
 echo " Running jshint, tests"
@@ -227,7 +232,7 @@ cd $AUTH_WORKSHOP_HOME
 cd authenticated-systems-workshop
 cd as-app-manager
 echo " Installing build dependancies "
-npm install
+rm -rf node_modules && npm install
 bower link as-ui-manager
 echo " Running jshint, tests"
 # npm run lint
