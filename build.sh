@@ -221,6 +221,7 @@ echo " Installing build dependancies "
 rm -rf node_modules && npm install
 bower link
 bower link as-sdk-javascript
+bower link as-token
 echo " Running jshint, tests"
 # npm run lint
 open SpecRunner.html
